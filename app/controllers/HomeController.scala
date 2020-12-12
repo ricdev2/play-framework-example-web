@@ -14,7 +14,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
 
   def conversionFrench(m: Float) = Action {
     implicit request: Request[AnyContent] =>
-      val formated = String.format(Locale.FRENCH, "%10.2f", m)
+      val formated = String.format(Locale.FRANCE, "%10.2f", m)
       Ok(views.html.index(formated))
   }
 }
